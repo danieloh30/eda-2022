@@ -2,6 +2,7 @@ apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
   name: kafka-scaledobject
+  namespace: kafka-keda
   labels:
     deploymentName: quarkus-eda-demo
 spec:
@@ -14,6 +15,5 @@ spec:
         bootstrapServers: my-cluster-kafka-bootstrap.kafka-keda.svc:9092
         consumerGroup: my-group
         topic: my-topic
-        # Optional
         lagThreshold: "50"
         offsetResetPolicy: latest

@@ -5,7 +5,7 @@ metadata:
     app: kafka-perf-producer-job
   name: kafka-perf-producer-job
 spec:
-  parallelism: 5
+  parallelism: 10
   completions: 5
   backoffLimit: 1
   template:
