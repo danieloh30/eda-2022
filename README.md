@@ -6,4 +6,6 @@ Deploying with Operator Hub - https://keda.sh/docs/2.6/deploy/#operatorhub
 
 ## knative-evnenting namespace
 
-ko apply -f quarkus-eda-knative-demo/kube/autoscaler-keda.yaml
+export KO_DOCKER_REPO=quay.io/danieloh30
+
+ko apply -f quarkus-eda-knative-demo/kube/01-autoscaler-keda.yaml
